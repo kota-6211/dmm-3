@@ -2,4 +2,4 @@
 <%= @user.name %>
 <%= @user.introduction %>
 
-<%= link_to "edit" , "/users/#{current_user.id}/edit" %>
+<%= link_to "edit" , @user.id == current_user.id ? edit_user_path(@user) : user_path(id: current_user.id) %> 
